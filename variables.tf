@@ -20,7 +20,7 @@ EOT
     name                    = string
     resource_group_name     = string
     runbook_name            = string
-    enabled                 = optional(bool, true)
+    enabled                 = optional(bool) # Default: true
     parameters              = optional(map(string))
     run_on_worker_group     = optional(string)
     uri                     = optional(string)
