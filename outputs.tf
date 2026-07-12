@@ -1,3 +1,7 @@
+output "automation_webhooks_id" {
+  description = "Map of id values across all automation_webhooks, keyed the same as var.automation_webhooks"
+  value       = { for k, v in azurerm_automation_webhook.automation_webhooks : k => v.id }
+}
 output "automation_webhooks_automation_account_name" {
   description = "Map of automation_account_name values across all automation_webhooks, keyed the same as var.automation_webhooks"
   value       = { for k, v in azurerm_automation_webhook.automation_webhooks : k => v.automation_account_name }
